@@ -80,6 +80,33 @@
             max-width: 200px;
             border-radius: 8px;
         }
+        /* 合作伙伴Logo画廊 */
+        .partner-section {
+            padding: 60px 20px;
+            background: #f8f8f8;
+        }
+        .partner-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .partner-logos img {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.85;
+            transition: all 0.3s;
+        }
+        .partner-logos img:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
         @keyframes fade {
             from {opacity: 0;}
             to {opacity: 1;}
@@ -99,7 +126,8 @@
             <nav>
                 <a href="#home" class="active" data-lang-en="Home" data-lang-cn="首页">Home</a>
                 <a href="#about" data-lang-en="About Us" data-lang-cn="关于我们">About Us</a>
-                <a href="#services" data-lang-en="Products" data-lang-cn="产品">Products</a>
+                <a href="#partners" data-lang-en="Partners" data-lang-cn="合作伙伴">合作伙伴</a>
+                <a href="#services" data-lang-en="Products" data-lang-cn="产品">产品</a>
                 <a href="#contact" data-lang-en="Contact" data-lang-cn="联系我们">Contact</a>
                 <button id="langBtn" class="cta-button" style="margin-left:10px; padding:6px 12px;">English</button>
             </nav>
@@ -157,9 +185,9 @@
                         <img src="images/about-kunshan.jpg" alt="Kunshan Base" style="width:100%;border-radius:8px;">
                     </div>
                     <div class="about-text">
-                        <h4 data-lang-en="Kunshan Base" data-lang-cn="昆山公司">昆山基地</h4>
-                        <p data-lang-en="High-frequency inductor R&D and design center, with self-owned land and factory buildings." data-lang-cn="专注高频电感研发与设计，为产品创新提供核心技术支持。">电感研发与设计中心。</p>
-                        <p data-lang-en="Address: No. 90, Shanghong Road, Dianshanhu Town, Kunshan City, Jiangsu Province" data-lang-cn="地址：江苏省昆山市淀山湖镇上洪路90号">地址：江苏省昆山市淀山湖镇上洪路90号</p>
+                        <h4 data-lang-en="Kunshan Base" data-lang-cn="昆山基地">昆山基地</h4>
+                        <p data-lang-en="High-frequency inductor R&D and design center, with self-owned land and factory buildings." data-lang-cn="高频电感研发与设计中心，自有土地厂房。">高频电感研发与设计中心，自有土地厂房。</p>
+                        <p data-lang-en="Address: No. 90, Shanghong Road, Lujia Town, Kunshan City, Jiangsu Province" data-lang-cn="地址：江苏省昆山市陆家镇上洪路90号">地址：江苏省昆山市陆家镇上洪路90号</p>
                     </div>
                 </div>
 
@@ -169,10 +197,23 @@
                         <img src="images/about-anhui.jpg" alt="Anhui Base" style="width:100%;border-radius:8px;">
                     </div>
                     <div class="about-text">
-                        <h4 data-lang-en="Anhui Base" data-lang-cn="安徽生产基地">安徽基地</h4>
-                        <p data-lang-en="High-frequency & power frequency inductor production base, with self-owned land and factory buildings." data-lang-cn="高频与工频电感规模化生产基地。">高频与工频电感规模化生产基地，自有土地厂房。</p>
-                        <p data-lang-en="Address: No. 28, Wenshan Road, Chaxi Town, Lai 'an County, Chuzhou City, Anhui Province" data-lang-cn="地址：安徽省滁州市来安县汊河镇文山路28号">地址：安徽省滁州市来安县汊河镇文山路28号</p>
+                        <h4 data-lang-en="Anhui Base" data-lang-cn="安徽基地">安徽基地</h4>
+                        <p data-lang-en="High-frequency & power frequency inductor production base, with self-owned land and factory buildings." data-lang-cn="高频与工频电感规模化生产基地，自有土地厂房。">高频与工频电感规模化生产基地，自有土地厂房。</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 新增：合作伙伴 Logo 画廊板块 -->
+        <section id="partners" class="partner-section">
+            <div class="partner-container">
+                <h2 class="section-title" data-lang-en="Our Partners" data-lang-cn="合作伙伴">合作伙伴</h2>
+                <div class="partner-logos">
+                    <!-- 你往下面加logo就行，格式 src="images/logo-01.png" 依次往下排 -->
+                    <img src="images/logo-01.png" alt="Partner Logo">
+                    <img src="images/logo-02.png" alt="Partner Logo">
+                    <img src="images/logo-03.png" alt="Partner Logo">
+                    <img src="images/logo-04.png" alt="Partner Logo">
                 </div>
             </div>
         </section>
@@ -307,8 +348,8 @@
                         </div>
                         <div class="contact-item">
                             <label data-lang-en="Domestic Hotline" data-lang-cn="国内咨询热线">国内咨询热线</label>
-                            <p>+86 15900970176 卢先生 </p>
-                            <p>+86 15001879622 马女士 </p>
+                            <p>+86 15001879622（马女士）</p>
+                            <p>+86 15900970176（卢先生）</p>
                         </div>
                         <div class="contact-item">
                             <label data-lang-en="Overseas Customer Consultation (WhatsApp)" data-lang-cn="海外客户咨询（WhatsApp）">海外客户咨询（WhatsApp）</label>
