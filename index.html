@@ -5,6 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q-PHONE PRECISION ELECTRONIC - Inductor Manufacturer</title>
     <link rel="stylesheet" href="tooplate-graphite-creative.css">
+    <style>
+        /* 产品标签切换样式（对标同行官网） */
+        .product-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: #f1f1f1;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .tab-btn.active {
+            background: #000;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+            animation: fade 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .product-detail {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .product-slider {
+            flex: 1;
+            min-width: 300px;
+        }
+        .product-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .param-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .param-table tr td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+        }
+        @keyframes fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +78,6 @@
                 <a href="#services" data-lang-en="Products" data-lang-cn="产品">Products</a>
                 <a href="#about" data-lang-en="About Us" data-lang-cn="关于我们">About Us</a>
                 <a href="#contact" data-lang-en="Contact" data-lang-cn="联系我们">Contact</a>
-                <!-- 语言切换按钮：初始化显示 English，点击变中文 -->
                 <button id="langBtn" class="cta-button" style="margin-left:10px; padding:6px 12px;">English</button>
             </nav>
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -42,68 +98,169 @@
                     <a href="#contact" class="cta-button" data-lang-en="Contact Us" data-lang-cn="联系我们">联系我们</a>
                 </div>
                 <div class="slider-container">
-                    <!-- 👇 这里替换你自己的图片 -->
                     <div class="slide active">
-                        <img src="images/inductor-01.jpg" alt="Company photo">
+                        <img src="images/company.jpg" alt="Company photo">
                     </div>
                     <div class="slide">
-                        <img src="images/inductor-02.jpg" alt="Sample Product">
+                        <img src="images/production.jpg" alt="Sample Product">
                     </div>
                     <div class="slide">
-                        <img src="images/inductor-03.jpg" alt="Electronic Components">
+                        <img src="images/warehouse.jpg" alt="Electronic Components">
                     </div>
                     <div class="slider-dots">
                         <div class="dot active" onclick="currentSlide(0)"></div>
-                        <div class="dot" onclick="currentSlide(1)"></div>
-                        <div class="dot" onclick="currentSlide(2)"></div>
+                        <div class="dot active" onclick="currentSlide(1)"></div>
+                        <div class="dot active" onclick="currentSlide(2)"></div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 全新产品板块（对标同行官网） -->
         <section id="services" class="section-services">
             <div class="services-container">
                 <h2 class="section-title" data-lang-en="Our Products" data-lang-cn="主营产品">主营产品</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-number">.01</div>
-                        <h3 data-lang-en="Power Inductor" data-lang-cn="功率电感">功率电感</h3>
-                        <p data-lang-en="High reliability, low resistance, suitable for consumer electronics and industrial equipment." data-lang-cn="高可靠性、低阻抗，适用于消费电子、工业设备电源管理。">高可靠性、低阻抗，适用于消费电子、工业设备电源管理。</p>
+                
+                <!-- 产品标签 -->
+                <div class="product-tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'cm')">
+                        <span data-lang-en="Common Mode Chokes" data-lang-cn="共模电感">Common Mode Chokes</span>
+                    </button>
+                    <button class="tab-btn" onclick="openTab(event, 'pfc')">
+                        <span data-lang-en="PFC Inductors" data-lang-cn="PFC电感">PFC Inductors</span>
+                    </button>
+                    <button class="tab-btn" onclick="openTab(event, 'power')">
+                        <span data-lang-en="Power Inductors" data-lang-cn="功率电感">Power Inductors</span>
+                    </button>
+                </div>
+
+                <!-- 1. 共模电感 -->
+                <div id="cm" class="tab-content active">
+                    <div class="product-detail">
+                        <div class="product-slider">
+                            <img src="images/common-mode.jpg" alt="Common Mode Chokes" style="width:100%;border-radius:8px;">
+                        </div>
+                        <div class="product-info">
+                            <h3 data-lang-en="Common Mode Chokes" data-lang-cn="共模电感">共模电感</h3>
+                            <p data-lang-en="Widely used in air conditioners, inverter appliances, switching power supplies, UPS, new energy equipment to suppress EMI interference." data-lang-cn="广泛应用于空调、变频家电、开关电源、UPS、新能源设备，抑制电磁干扰。">广泛应用于空调、变频家电、开关电源、UPS、新能源设备，抑制电磁干扰。</p>
+                            <p><strong data-lang-en="Features" data-lang-cn="产品特点">产品特点：</strong></p>
+                            <ul data-lang-en="Vertical / Horizontal / Three-phase / Nanocrystalline / High Current optional; High anti-interference; RoHS compliant; Customizable" data-lang-cn="立式/卧式/三相/纳米晶/大电流可选；高抗干扰；环保RoHS；支持定制">
+                                <li>立式/卧式/三相/纳米晶/大电流可选</li>
+                                <li>高共模干扰抑制能力</li>
+                                <li>低漏感、长寿命</li>
+                                <li>符合RoHS，支持定制</li>
+                            </ul>
+                            <table class="param-table">
+                                <tr>
+                                    <td data-lang-en="Rated Current" data-lang-cn="额定电流">额定电流</td>
+                                    <td>0 ~ 100A</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Inductance Range" data-lang-cn="电感范围">电感范围</td>
+                                    <td>0 ~ 100mH (Customizable)</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Working Temp" data-lang-cn="工作温度">工作温度</td>
+                                    <td>-40℃ ~ +125℃</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-number">.02</div>
-                        <h3 data-lang-en="Chip Inductor" data-lang-cn="贴片电感">贴片电感</h3>
-                        <p data-lang-en="Miniature size, high stability, used in mobile phones, automotive electronics, communications." data-lang-cn="微型体积、高稳定性，用于手机、汽车电子、通讯设备。">微型体积、高稳定性，用于手机、汽车电子、通讯设备。</p>
+                </div>
+
+                <!-- 2. PFC电感 -->
+                <div id="pfc" class="tab-content">
+                    <div class="product-detail">
+                        <div class="product-slider">
+                            <img src="images/pfc-inductor.jpg" alt="PFC Inductors" style="width:100%;border-radius:8px;">
+                        </div>
+                        <div class="product-info">
+                            <h3 data-lang-en="PFC Inductors" data-lang-cn="PFC电感">PFC电感</h3>
+                            <p data-lang-en="Mainly used for residential & commercial air conditioners, inverter power supplies, industrial power, new energy storage." data-lang-cn="主要用于家用/商用空调、变频电源、工业电源、新能源储能。">主要用于家用/商用空调、变频电源、工业电源、新能源储能。</p>
+                            <p><strong data-lang-en="Features" data-lang-cn="产品特点">产品特点：</strong></p>
+                            <ul data-lang-en="Flat wire / Round wire optional; High efficiency; Low noise; Air conditioner special; High current" data-lang-cn="扁线/圆线可选；高效率；低噪音；空调专用；大电流">
+                                <li>扁线/圆线工艺可选</li>
+                                <li>空调专用、大功率适配</li>
+                                <li>高效率、低损耗、低噪音</li>
+                                <li>大电流规格齐全</li>
+                            </ul>
+                            <table class="param-table">
+                                <tr>
+                                    <td data-lang-en="Rated Current" data-lang-cn="额定电流">额定电流</td>
+                                    <td>0 ~ 200A</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Inductance Range" data-lang-cn="电感范围">电感范围</td>
+                                    <td>0 ~ 1mH (Customizable)</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Working Temp" data-lang-cn="工作温度">工作温度</td>
+                                    <td>-40℃ ~ +125℃</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-number">.03</div>
-                        <h3 data-lang-en="Magnetic Bead" data-lang-cn="磁珠">磁珠</h3>
-                        <p data-lang-en="Effective noise suppression and signal filtering for high-frequency applications." data-lang-cn="有效抑制噪音、信号滤波，适配高频电子场景。">有效抑制噪音、信号滤波，适配高频电子场景。</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-number">.04</div>
-                        <h3 data-lang-en="Custom Inductor" data-lang-cn="定制电感">定制电感</h3>
-                        <p data-lang-en="OEM/ODM services, customize products according to customer requirements." data-lang-cn="提供OEM/ODM服务，根据客户需求定制产品。">提供OEM/ODM服务，根据客户需求定制产品。</p>
+                </div>
+
+                <!-- 3. 功率电感 -->
+                <div id="power" class="tab-content">
+                    <div class="product-detail">
+                        <div class="product-slider">
+                            <img src="images/power-inductor.jpg" alt="Power Inductors" style="width:100%;border-radius:8px;">
+                        </div>
+                        <div class="product-info">
+                            <h3 data-lang-en="Power Inductors" data-lang-cn="功率电感">功率电感</h3>
+                            <p data-lang-en="Used in consumer electronics, adapters, LED drivers, control boards, small home appliances." data-lang-cn="应用于消费电子、适配器、LED驱动、控制板、小家电。">应用于消费电子、适配器、LED驱动、控制板、小家电。</p>
+                            <p><strong data-lang-en="Features" data-lang-cn="产品特点">产品特点：</strong></p>
+                            <ul data-lang-en="SMD / Through-hole optional; Small size; High saturation current; Low DCR; Stable performance" data-lang-cn="贴片/直插可选；体积小；高饱和电流；低直流电阻；性能稳定">
+                                <li>贴片/直插两种封装</li>
+                                <li>体积小巧、安装方便</li>
+                                <li>高饱和电流、低阻抗</li>
+                                <li>批量一致性好</li>
+                            </ul>
+                            <table class="param-table">
+                                <tr>
+                                    <td data-lang-en="Rated Current" data-lang-cn="额定电流">额定电流</td>
+                                    <td>0 ~ 30A</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Inductance Range" data-lang-cn="电感范围">电感范围</td>
+                                    <td>0.1μH ~ 1000μH</td>
+                                </tr>
+                                <tr>
+                                    <td data-lang-en="Working Temp" data-lang-cn="工作温度">工作温度</td>
+                                    <td>-40℃ ~ +125℃</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 🔥 已补全：公司简介+三大基地+认证+实验室（双语完整版） -->
         <section id="about" class="section-about">
-            <h2 class="section-title" data-lang-en="About Us" data-lang-cn="公司简介">公司简介</h2>
+            <h2 class="section-title" data-lang-en="About Us" data-lang-cn="关于我们">关于我们</h2>
             <div class="about-container">
                 <div class="about-content">
                     <h3 data-lang-en="Company Overview" data-lang-cn="公司概况">公司概况</h3>
-                    <p data-lang-en="Q-PHONE PRECISION ELECTRONIC CO.,LTD is located in Kunshan, Jiangsu, close to Shanghai, with convenient transportation." data-lang-cn="Q-PHONE PRECISION ELECTRONIC CO.,LTD 位于江苏昆山，毗邻上海，交通便利。">Q-PHONE PRECISION ELECTRONIC CO.,LTD（昆山群丰精密电子有限公司）位于江苏昆山，毗邻上海，交通便利。</p>
+                    <p data-lang-en="Founded in 2013, Q-PHONE PRECISION ELECTRONIC is a professional inductor manufacturer with 3 major bases, focusing on R&D and production of high-frequency & power frequency inductors." data-lang-cn="公司成立于2013年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。">公司成立于2013年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。</p>
+                    <p data-lang-en="Kunshan Base: High-frequency inductor R&D and design center with own land & factory." data-lang-cn="昆山公司：高频电感研发设计中心，自有土地厂房。">昆山公司：高频电感研发设计中心，自有土地厂房。</p>
+                    <p data-lang-en="Anhui Base: High-frequency inductor mass production base with own land & factory." data-lang-cn="安徽公司：高频电感规模化生产基地，自有土地厂房。">安徽公司：高频电感规模化生产基地，自有土地厂房。</p>
+                    <p data-lang-en="Tianchang Base: Power frequency inductor specialist, recognized as Anhui Provincial High-Tech Enterprise." data-lang-cn="天长公司：专业工频电感制造，安徽省高新技术企业。">天长公司：专业工频电感制造，安徽省高新技术企业。</p>
                 </div>
                 <div class="about-blocks">
                     <div class="about-block">
-                        <h4 data-lang-en="Professional Manufacturing" data-lang-cn="专业制造">专业制造</h4>
-                        <p data-lang-en="Years of inductor production experience, mature process, stable quality." data-lang-cn="多年电感生产经验，工艺成熟，品质稳定。">多年电感生产经验，工艺成熟，品质稳定。</p>
+                        <h4 data-lang-en="Certifications" data-lang-cn="体系认证">体系认证</h4>
+                        <p data-lang-en="ISO9001 Quality Management System & ISO14001 Environmental Management System." data-lang-cn="通过ISO9001质量管理体系、ISO14001环境管理体系认证。">通过ISO9001质量管理体系、ISO14001环境管理体系认证。</p>
                     </div>
                     <div class="about-block">
-                        <h4 data-lang-en="Global Supply" data-lang-cn="全球供应">全球供应</h4>
-                        <p data-lang-en="Products exported to Europe, America, Asia and other regions." data-lang-cn="产品远销欧美、亚洲等多个国家和地区。">产品远销欧美、亚洲等多个国家和地区。</p>
+                        <h4 data-lang-en="Professional Laboratory" data-lang-cn="专业实验室">专业实验室</h4>
+                        <p data-lang-en="Salt spray test, high-low temperature test, material testing, product life test, ensuring reliability and safety." data-lang-cn="配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。">配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。</p>
+                    </div>
+                    <div class="about-block">
+                        <h4 data-lang-en="Custom Service" data-lang-cn="定制服务">定制服务</h4>
+                        <p data-lang-en="OEM/ODM services available, customize parameters and size for customers." data-lang-cn="提供OEM/ODM服务，为客户定制参数与尺寸。">提供OEM/ODM服务，为客户定制参数与尺寸。</p>
                     </div>
                 </div>
             </div>
@@ -139,26 +296,37 @@
 
     <script src="tooplate-graphite-script.js"></script>
     <script>
-        let currentLang = 'en'; // 默认英文
+        // 双语切换
+        let currentLang = 'en';
         const langBtn = document.getElementById('langBtn');
 
         function initLang(){
-            // 切换所有带 data-lang-en/cn 的元素文字
             document.querySelectorAll('[data-lang-en]').forEach(el => {
                 el.textContent = el.getAttribute('data-lang-'+currentLang);
             });
-            
-            // 特殊处理：按钮文字反向切换
             langBtn.textContent = currentLang === 'en' ? '中文' : 'English';
         }
         
-        // 语言切换按钮点击事件
         langBtn.addEventListener('click', () => {
             currentLang = currentLang === 'en' ? 'cn' : 'en';
             initLang();
         });
         
-        // 页面加载时初始化
+        // 产品标签切换
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
         window.onload = initLang;
     </script>
 </body>
