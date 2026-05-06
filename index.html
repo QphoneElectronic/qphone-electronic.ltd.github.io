@@ -6,7 +6,7 @@
     <title>Q-PHONE PRECISION ELECTRONIC - Inductor Manufacturer</title>
     <link rel="stylesheet" href="tooplate-graphite-creative.css">
     <style>
-        /* 产品标签切换样式（对标同行官网） */
+        /* 产品标签切换样式 */
         .product-tabs {
             display: flex;
             gap: 20px;
@@ -57,6 +57,21 @@
             padding: 8px 12px;
             border: 1px solid #ddd;
         }
+        .about-detail {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
         @keyframes fade {
             from {opacity: 0;}
             to {opacity: 1;}
@@ -75,8 +90,8 @@
             </a>
             <nav>
                 <a href="#home" class="active" data-lang-en="Home" data-lang-cn="首页">Home</a>
-                <a href="#services" data-lang-en="Products" data-lang-cn="产品">Products</a>
                 <a href="#about" data-lang-en="About Us" data-lang-cn="关于我们">About Us</a>
+                <a href="#services" data-lang-en="Products" data-lang-cn="产品">Products</a>
                 <a href="#contact" data-lang-en="Contact" data-lang-cn="联系我们">Contact</a>
                 <button id="langBtn" class="cta-button" style="margin-left:10px; padding:6px 12px;">English</button>
             </nav>
@@ -89,8 +104,7 @@
     </header>
 
     <main>
-
-        <!-- 🔥 首页已替换成 公司全景视频背景 -->
+        <!-- 首页（视频背景） -->
         <section id="home" class="section-hero" style="position:relative; overflow:hidden; height:100vh;">
             <video autoplay muted loop playsinline 
                 style="
@@ -109,6 +123,57 @@
                     <h2 data-lang-en="Precision Inductors For Electronics Industry" data-lang-cn="电子行业精密电感制造商">电子行业精密电感制造商</h2>
                     <p data-lang-en="Kunshan Qunfeng Precision Electronic Co., Ltd. (Q-PHONE) specializes in R&D, production and sales of high-quality inductors, magnetic beads and electronic components." data-lang-cn="昆山群丰精密电子有限公司（Q-PHONE）专业研发、生产、销售高品质电感、磁珠及各类电子元器件。">昆山群丰精密电子有限公司（Q-PHONE）专业研发、生产、销售高品质电感、磁珠及各类电子元器件。</p>
                     <a href="#contact" class="cta-button" data-lang-en="Contact Us" data-lang-cn="联系我们">联系我们</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🔥 关于我们（已调整到产品上方，补充了3个基地信息） -->
+        <section id="about" class="section-about">
+            <h2 class="section-title" data-lang-en="About Us" data-lang-cn="关于我们">关于我们</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <h3 data-lang-en="Company Overview" data-lang-cn="公司概况">公司概况</h3>
+                    <p data-lang-en="Founded in 2005, Q-PHONE PRECISION ELECTRONIC is a leading inductor manufacturer with 3 major bases, focusing on high-frequency & power frequency inductors." data-lang-cn="公司成立于2005年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。">公司成立于2005年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。</p>
+                </div>
+
+                <!-- 昆山基地 -->
+                <div class="about-detail">
+                    <div class="about-img">
+                        <img src="images/about-kunshan.jpg" alt="Kunshan Base" style="width:100%;border-radius:8px;">
+                    </div>
+                    <div class="about-text">
+                        <h4 data-lang-en="Kunshan Base" data-lang-cn="昆山公司">昆山公司</h4>
+                        <p data-lang-en="High-frequency inductor R&D and design center with own land & factory." data-lang-cn="高频电感研发设计中心，自有土地厂房。">高频电感研发设计中心，自有土地厂房。</p>
+                        <p data-lang-en="Address: No. 90, Shanghong Road, Lujia Town, Kunshan City, Jiangsu Province" data-lang-cn="地址：江苏省昆山市陆家镇上洪路90号">地址：江苏省昆山市陆家镇上洪路90号</p>
+                    </div>
+                </div>
+
+                <!-- 安徽基地 -->
+                <div class="about-detail">
+                    <div class="about-img">
+                        <img src="images/about-anhui.jpg" alt="Anhui Base" style="width:100%;border-radius:8px;">
+                    </div>
+                    <div class="about-text">
+                        <h4 data-lang-en="Anhui Base" data-lang-cn="安徽公司">安徽公司</h4>
+                        <p data-lang-en="High-frequency inductor mass production base with own land & factory." data-lang-cn="高频电感规模化生产基地，自有土地厂房。">高频电感规模化生产基地，自有土地厂房。</p>
+                        <p data-lang-en="Address: No.28, Heqiao 2nd Road, Shuanghe Town, Lai'an County, Chuzhou City, Anhui Province" data-lang-cn="地址：安徽省滁州市来安县双河镇河桥二路28号">地址：安徽省滁州市来安县双河镇河桥二路28号</p>
+                    </div>
+                </div>
+
+                <!-- 天长基地 -->
+                <div class="about-blocks">
+                    <div class="about-block">
+                        <h4 data-lang-en="Tianchang Base" data-lang-cn="天长公司">天长公司</h4>
+                        <p data-lang-en="Specializes in power frequency inductors, recognized as Anhui Provincial High-Tech Enterprise." data-lang-cn="专业工频电感制造，安徽省高新技术企业。">专业工频电感制造，安徽省高新技术企业。</p>
+                    </div>
+                    <div class="about-block">
+                        <h4 data-lang-en="Certifications" data-lang-cn="体系认证">体系认证</h4>
+                        <p data-lang-en="ISO9001 Quality Management System & ISO14001 Environmental Management System." data-lang-cn="通过ISO9001质量管理体系、ISO14001环境管理体系认证。">通过ISO9001质量管理体系、ISO14001环境管理体系认证。</p>
+                    </div>
+                    <div class="about-block">
+                        <h4 data-lang-en="Professional Laboratory" data-lang-cn="专业实验室">专业实验室</h4>
+                        <p data-lang-en="Salt spray test, high-low temperature test, material testing, product life test, ensuring reliability and safety." data-lang-cn="配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。">配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -171,7 +236,7 @@
                         <div class="product-info">
                             <h3 data-lang-en="PFC Inductors" data-lang-cn="PFC电感">PFC电感</h3>
                             <p data-lang-en="Mainly used for residential & commercial air conditioners, inverter power supplies, industrial power, new energy storage." data-lang-cn="主要用于家用/商用空调、变频电源、工业电源、新能源储能。">主要用于家用/商用空调、变频电源、工业电源、新能源储能。</p>
-                            <p><strong data-lang-en="Features">产品特点：</strong></p>
+                            <p><strong data-lang-en="Features" data-lang-cn="产品特点">产品特点：</strong></p>
                             <ul>
                                 <li data-lang-en="Flat wire / Round wire optional">扁线/圆线工艺可选</li>
                                 <li data-lang-en="Air conditioner special, high power compatible">空调专用、大功率适配</li>
@@ -204,7 +269,7 @@
                         <div class="product-info">
                             <h3 data-lang-en="Power Inductors" data-lang-cn="功率电感">功率电感</h3>
                             <p data-lang-en="Used in consumer electronics, adapters, LED drivers, control boards, small home appliances." data-lang-cn="应用于消费电子、适配器、LED驱动、控制板、小家电。">应用于消费电子、适配器、LED驱动、控制板、小家电。</p>
-                            <p><strong data-lang-en="Features">产品特点：</strong></p>
+                            <p><strong data-lang-en="Features" data-lang-cn="产品特点">产品特点：</strong></p>
                             <ul>
                                 <li data-lang-en="SMD / Through-hole optional">贴片/直插两种封装</li>
                                 <li data-lang-en="Small size, easy installation">体积小巧、安装方便</li>
@@ -226,34 +291,6 @@
                                 </tr>
                             </table>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 关于我们 -->
-        <section id="about" class="section-about">
-            <h2 class="section-title" data-lang-en="About Us" data-lang-cn="关于我们">关于我们</h2>
-            <div class="about-container">
-                <div class="about-content">
-                    <h3 data-lang-en="Company Overview" data-lang-cn="公司概况">公司概况</h3>
-                    <p data-lang-en="Founded in 2013, Q-PHONE PRECISION ELECTRONIC is a professional inductor manufacturer with 3 major bases, focusing on R&D and production of high-frequency & power frequency inductors." data-lang-cn="公司成立于2013年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。">公司成立于2013年，拥有3大生产研发基地，专注高频、工频电感的研发与制造。</p>
-                    <p data-lang-en="Kunshan Base: High-frequency inductor R&D and design center with own land & factory." data-lang-cn="昆山公司：高频电感研发设计中心，自有土地厂房。">昆山公司：高频电感研发设计中心，自有土地厂房。</p>
-                    <p data-lang-en="Anhui Base: High-frequency inductor mass production base with own land & factory." data-lang-cn="安徽公司：高频电感规模化生产基地，自有土地厂房。">安徽公司：高频电感规模化生产基地，自有土地厂房。</p>
-                    <p data-lang-en="Tianchang Base: Power frequency inductor specialist, recognized as Anhui Provincial High-Tech Enterprise." data-lang-cn="天长公司：专业工频电感制造，安徽省高新技术企业。">天长公司：专业工频电感制造，安徽省高新技术企业。</p>
-                </div>
-                <div class="about-blocks">
-                    <div class="about-block">
-                        <h4 data-lang-en="Certifications" data-lang-cn="体系认证">体系认证</h4>
-                        <p data-lang-en="ISO9001 Quality Management System & ISO14001 Environmental Management System." data-lang-cn="通过ISO9001质量管理体系、ISO14001环境管理体系认证。">通过ISO9001质量管理体系、ISO14001环境管理体系认证。</p>
-                    </div>
-                    <div class="about-block">
-                        <h4 data-lang-en="Professional Laboratory" data-lang-cn="专业实验室">专业实验室</h4>
-                        <p data-lang-en="Salt spray test, high-low temperature test, material testing, product life test, ensuring reliability and safety." data-lang-cn="配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。">配备盐雾试验、高低温实验、材料检测、产品寿命测试，全方位保障产品可靠与安全。</p>
-                    </div>
-                    <div class="about-block">
-                        <h4 data-lang-en="Custom Service" data-lang-cn="定制服务">定制服务</h4>
-                        <p data-lang-en="OEM/ODM services available, customize parameters and size for customers." data-lang-cn="提供OEM/ODM服务，为客户定制参数与尺寸。">提供OEM/ODM服务，为客户定制参数与尺寸。</p>
                     </div>
                 </div>
             </div>
@@ -281,7 +318,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
