@@ -80,21 +80,20 @@
             max-width: 200px;
             border-radius: 8px;
         }
-        /* 合作伙伴Logo画廊 */
-        .partner-section {
-            padding: 60px 20px;
-            background: #f8f8f8;
+        /* 关于我们内部 合作客户Logo画廊 */
+        .partners-inner {
+            margin: 60px 0 20px;
         }
-        .partner-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .partners-inner h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
         .partner-logos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            margin-top: 40px;
         }
         .partner-logos img {
             height: 100px;
@@ -126,7 +125,6 @@
             <nav>
                 <a href="#home" class="active" data-lang-en="Home" data-lang-cn="首页">Home</a>
                 <a href="#about" data-lang-en="About Us" data-lang-cn="关于我们">About Us</a>
-                <a href="#partners" data-lang-en="Partners" data-lang-cn="合作伙伴">合作伙伴</a>
                 <a href="#services" data-lang-en="Products" data-lang-cn="产品">产品</a>
                 <a href="#contact" data-lang-en="Contact" data-lang-cn="联系我们">Contact</a>
                 <button id="langBtn" class="cta-button" style="margin-left:10px; padding:6px 12px;">English</button>
@@ -163,7 +161,7 @@
             </div>
         </section>
 
-        <!-- 关于我们 -->
+        <!-- 关于我们（内含合作客户） -->
         <section id="about" class="section-about">
             <h2 class="section-title" data-lang-en="About Us" data-lang-cn="关于我们">关于我们</h2>
             <div class="about-container">
@@ -201,20 +199,19 @@
                         <p data-lang-en="High-frequency & power frequency inductor production base, with self-owned land and factory buildings." data-lang-cn="高频与工频电感规模化生产基地，自有土地厂房。">高频与工频电感规模化生产基地，自有土地厂房。</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 新增：合作伙伴 Logo 画廊板块 -->
-        <section id="partners" class="partner-section">
-            <div class="partner-container">
-                <h2 class="section-title" data-lang-en="Our Partners" data-lang-cn="合作伙伴">合作伙伴</h2>
-                <div class="partner-logos">
-                    <!-- 你往下面加logo就行，格式 src="images/logo-01.png" 依次往下排 -->
-                    <img src="images/logo-01.png" alt="Partner Logo">
-                    <img src="images/logo-02.png" alt="Partner Logo">
-                    <img src="images/logo-03.png" alt="Partner Logo">
-                    <img src="images/logo-04.png" alt="Partner Logo">
+                <!-- 内嵌在关于我们里：合作伙伴Logo画廊 -->
+                <div class="partners-inner">
+                    <h3 data-lang-en="Cooperative Customers" data-lang-cn="合作客户">合作客户</h3>
+                    <div class="partner-logos">
+                        <!-- 在这里加logo 格式 <img src="images/logo-01.png" alt="Partner"> -->
+                        <img src="images/logo-01.png" alt="Partner Logo">
+                        <img src="images/logo-02.png" alt="Partner Logo">
+                        <img src="images/logo-03.png" alt="Partner Logo">
+                        <img src="images/logo-04.png" alt="Partner Logo">
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -284,8 +281,7 @@
                                 <li data-lang-en="Complete high current specifications">大电流规格齐全</li>
                             </ul>
                             <table class="param-table">
-                                <tr>
-                                    <td data-lang-en="Rated Current">额定电流</td>
+                                <td data-lang-en="Rated Current">额定电流</td>
                                     <td>0 ~ 200A</td>
                                 </tr>
                                 <tr>
